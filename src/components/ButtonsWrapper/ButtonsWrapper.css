@@ -1,0 +1,8 @@
+.buttons-wrapper {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: rgb(59, 59, 255);
+  border-radius: 0.5vw;
+}

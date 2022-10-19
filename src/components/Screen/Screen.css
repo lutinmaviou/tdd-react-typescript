@@ -1,0 +1,12 @@
+.screen {
+  height: 5vw;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  padding-right: 2vw;
+  font-size: 3vw;
+  font-weight: bold;
+  background-color: darkblue;
+  margin: 0.4vw;
+  border-radius: 0.5vw;
+}
