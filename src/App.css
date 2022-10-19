@@ -2,6 +2,10 @@
   text-align: center;
 }
 
+h1{
+  color: rgb(239, 239, 239);
+}
+
 .container {
   width: 100%;
   display: flex;
