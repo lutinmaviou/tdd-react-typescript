@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import './Button.css';
 
 type Props = {
@@ -6,8 +7,13 @@ type Props = {
   type?: string | null;
 };
 
-
 const Button: React.FC<Props> = ({ className, value, type }) => {
+  const [operation, setOperation] = useState(type);
+  const handleClickButton = () => {
+    //e.preventDefault();
+    setOperation(type);
+    console.log(operation);
+  };
   const pressButton = (e: React.MouseEvent<HTMLButtonElement>) => {
     const btn = e.currentTarget;
     btn.style.boxShadow = '0 0 0.05vw 0.1vw, 0 0 0.05vw 0.1vw';
@@ -21,7 +27,9 @@ const Button: React.FC<Props> = ({ className, value, type }) => {
       className={className}
       onMouseDown={pressButton}
       onMouseUp={releaseButton}
-      onClick={() => console.log({ type })}
+      onClick={() => {
+        handleClickButton();
+      }}
       data-testid={className}
     >
       {value}

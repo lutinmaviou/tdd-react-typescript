@@ -1,7 +1,9 @@
 const operations = (nb1: number, nb2: number, type: string): number | null => {
+  let result: number = 0;
   switch (type) {
     case 'addition':
-      return nb1 + nb2;
+      result += nb1 + nb2;
+      return result;
       break;
     case 'substraction':
       return nb1 - nb2;
@@ -13,7 +15,7 @@ const operations = (nb1: number, nb2: number, type: string): number | null => {
       return nb1 / nb2;
       break;
     default:
-      return null;
+      return result;
       break;
   }
 };
