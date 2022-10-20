@@ -33,7 +33,6 @@ function App() {
 
   return (
     <div className="App">
-      <h1>My Calculator</h1>
       <section className="container">
         <main>
           <Screen value="0" />

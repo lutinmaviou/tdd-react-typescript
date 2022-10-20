@@ -11,6 +11,8 @@ h1{
   display: flex;
   align-items: center;
   justify-content: center;
+  position: absolute;
+  top: 3%;
 }
 
 main {
@@ -19,4 +21,5 @@ main {
   background-color: rgb(59, 59, 255);
   border-radius: 0.5vw;
   color: white;
+  padding: 1vw;
 }
