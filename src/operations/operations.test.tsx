@@ -21,3 +21,9 @@ test('should return 6 if numbers are 2 and 3', () => {
 test('should return 3 if numbers are 12 and 4', () => {
   expect(operations(12, 4, 'division')).toBe(3);
 });
+
+test('should render button component with addition className', () => {
+  render(<Button className="addition" value="" />);
+  const button = screen.getByRole('button');
+  expect(button).toHaveClass('addition');
+});
