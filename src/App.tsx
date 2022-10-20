@@ -58,6 +58,17 @@ function App() {
                       : ''
                   }
                   value={btn}
+                  type={
+                    btn === '+'
+                      ? 'addition'
+                      : btn === '-'
+                      ? 'substraction'
+                      : btn === 'X'
+                      ? 'multiplication'
+                      : btn === '/'
+                      ? 'division'
+                      : null
+                  }
                 />
               );
             })}
