@@ -4,14 +4,14 @@ button {
   margin: 0.4vw;
   font-size: 2vw;
   font-weight: bold;
-  border: 0.17vw solid rgb(93, 93, 93);
+  border: 0.17vw solid rgb(104, 104, 104);
   border-radius: 0.5vw;
   box-shadow: 0 0 0.4vw 0.1vw, 0 0 0.4vw 0.1vw;
 }
 
 button:hover {
   cursor: pointer;
-  opacity: 0.8;
+  opacity: 0.9;
 }
 
 .equals {

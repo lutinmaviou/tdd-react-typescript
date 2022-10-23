@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import Button from './components/Button/Button';
 import ButtonsWrapper from './components/ButtonsWrapper/ButtonsWrapper';
 import Screen from './components/Screen/Screen';
 
 function App() {
+
   const btnValues: string[] = [
     '%',
     'CE',
@@ -31,11 +32,12 @@ function App() {
     '=',
   ];
 
+
   return (
     <div className="App">
       <section className="container">
         <main>
-          <Screen value="0" />
+          <Screen value={'0'} />
           <ButtonsWrapper>
             {btnValues.map((btn, i) => {
               return (
@@ -58,7 +60,7 @@ function App() {
                       : ''
                   }
                   value={btn}
-                  type={
+                  title={
                     btn === '+'
                       ? 'addition'
                       : btn === '-'
@@ -67,7 +69,7 @@ function App() {
                       ? 'multiplication'
                       : btn === '/'
                       ? 'division'
-                      : null
+                      : ''
                   }
                 />
               );

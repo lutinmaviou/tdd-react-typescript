@@ -1,22 +1,15 @@
-import { useState } from 'react';
+import React from 'react';
 import './Button.css';
 
-type Props = {
-  className: string;
-  value: string;
-  type?: string | null;
-};
-
-const Button: React.FC<Props> = ({ className, value, type }) => {
-  const [operation, setOperation] = useState(type);
-  const handleClickButton = () => {
-    //e.preventDefault();
-    setOperation(type);
-    console.log(operation);
-  };
+const ButtonWrapper: React.FunctionComponent<
+  React.DetailedHTMLProps<
+    React.ButtonHTMLAttributes<HTMLButtonElement>,
+    HTMLButtonElement
+  > & { title: string; className: string; value: string }
+> = ({ ...props }) => {
   const pressButton = (e: React.MouseEvent<HTMLButtonElement>) => {
     const btn = e.currentTarget;
-    btn.style.boxShadow = '0 0 0.05vw 0.1vw, 0 0 0.05vw 0.1vw';
+    btn.style.boxShadow = '0 0 0.01vw 0.1vw, 0 0 0.01vw 0.1vw';
   };
   const releaseButton = (e: React.MouseEvent<HTMLButtonElement>) => {
     const btn = e.currentTarget;
@@ -24,17 +17,15 @@ const Button: React.FC<Props> = ({ className, value, type }) => {
   };
   return (
     <button
-      className={className}
+      {...props}
+      className={props.className}
+      title={props.title}
       onMouseDown={pressButton}
       onMouseUp={releaseButton}
-      onClick={() => {
-        handleClickButton();
-      }}
-      data-testid={className}
     >
-      {value}
+      {props.value}
     </button>
   );
 };
 
-export default Button;
+export default ButtonWrapper;
