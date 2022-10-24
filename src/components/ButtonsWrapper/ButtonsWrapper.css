@@ -3,8 +3,10 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  background-color: rgb(26, 26, 203);
   border-radius: 0.5vw;
   padding: 1vw;
   margin-left: -1vw;
+  background: url('../../../public/img/brushed-alum.png');
+  background-size: cover;
+  background-color: rgb(3, 0, 185);
 }
